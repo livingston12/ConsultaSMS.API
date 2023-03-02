@@ -145,9 +145,9 @@ namespace WebConsultaSMS.DataBase
                         Description = "Consulta Productos SMS",
                         Active = true,
                         CreatedDate = DateTime.Now,
-                        TrnCode = "0006",
+                        TrnCode = "2106",
                         MediatorId = mediator.Id,
-                        Channel = "B2000",
+                        Channel = "CHANEL",
                     },
                     new TransactionEntity()
                     {
@@ -155,9 +155,9 @@ namespace WebConsultaSMS.DataBase
                         Description = "Consulta Detalle de cuentas",
                         Active = true,
                         CreatedDate = DateTime.Now,
-                        TrnCode = "0007",
+                        TrnCode = "2109",
                         MediatorId = mediator.Id,
-                        Channel = "B2000",
+                        Channel = "CHANEL",
                     },
                     new TransactionEntity()
                     {
@@ -165,9 +165,9 @@ namespace WebConsultaSMS.DataBase
                         Description = "Consulta Detalle de certificados",
                         Active = true,
                         CreatedDate = DateTime.Now,
-                        TrnCode = "0008",
+                        TrnCode = "2108",
                         MediatorId = mediator.Id,
-                        Channel = "B2000",
+                        Channel = "CHANEL",
                     },
                     new TransactionEntity()
                     {
@@ -175,9 +175,9 @@ namespace WebConsultaSMS.DataBase
                         Description = "Consulta Detalle de prestamos",
                         Active = true,
                         CreatedDate = DateTime.Now,
-                        TrnCode = "0010",
+                        TrnCode = "2110",
                         MediatorId = mediator.Id,
-                        Channel = "B2000",
+                        Channel = "CHANEL",
                     },
                     new TransactionEntity()
                     {
@@ -185,9 +185,9 @@ namespace WebConsultaSMS.DataBase
                         Description = "Consulta Detalle tarjetas de creditos",
                         Active = true,
                         CreatedDate = DateTime.Now,
-                        TrnCode = "0033",
+                        TrnCode = "2133",
                         MediatorId = mediator.Id,
-                        Channel = "B2000",
+                        Channel = "CHANEL",
                     },
                     new TransactionEntity()
                     {
@@ -195,7 +195,7 @@ namespace WebConsultaSMS.DataBase
                         Description = "Validar si el usuario exise con cedula y telefono",
                         Active = true,
                         CreatedDate = DateTime.Now,
-                        TrnCode = "1805",
+                        TrnCode = "2105",
                         MediatorId = mediator.Id,
                         Channel = "SMS"
                     },
@@ -332,11 +332,9 @@ namespace WebConsultaSMS.DataBase
         {
             var mediators = dbContext.Mediators.Where(
                 x =>
-                    x.Description == "Mediator de QA 20.134"
-                    || x.Description == "Mediator de Desarrollo 21.15"
-                    || x.Description == "Mediator de QA 20.79"
-                    || x.Description == "Mediator de Produccion 7.15"
-                    || x.Description == "Mediator de QA 20.133"
+                    x.Instance == "DEV"
+                    || x.Instance == "QA"
+                    || x.Instance == "PROD"
             );
             await validateMediators(mediators);
         }
@@ -375,45 +373,27 @@ namespace WebConsultaSMS.DataBase
                 new MediatorEntity()
                 {
                     Id = new Guid(),
-                    Description = "Mediator de QA 20.134",
-                    Instance = "QA",
-                    Url = "http://172.20.18.134:8732/ExtremeMediator/Service",
-                    Active = false,
-                    CreatedDate = DateTime.Now
-                },
-                new MediatorEntity()
-                {
-                    Id = new Guid(),
-                    Description = "Mediator de Desarrollo 21.15",
+                    Description = "Mediator de Desarrollo",
                     Instance = "DEV",
-                    Url = "http://172.21.18.15:8732/ExtremeMediator/Service",
+                    Url = "URLSERVICE",
                     Active = true,
                     CreatedDate = DateTime.Now
                 },
                 new MediatorEntity()
                 {
                     Id = new Guid(),
-                    Description = "Mediator de QA 20.79",
+                    Description = "Mediator de QA",
                     Instance = "QA",
-                    Url = "http://172.20.18.79:8732/ExtremeMediator/Service",
+                    Url = "URLSERVICE",
                     Active = false,
                     CreatedDate = DateTime.Now
                 },
                 new MediatorEntity()
                 {
                     Id = new Guid(),
-                    Description = "Mediator de Produccion 7.15",
+                    Description = "Mediator de Produccion",
                     Instance = "PROD",
-                    Url = "http://172.20.7.155:8732/ExtremeMediator/Service",
-                    Active = false,
-                    CreatedDate = DateTime.Now
-                },
-                new MediatorEntity()
-                {
-                    Id = new Guid(),
-                    Description = "Mediator de QA 20.133",
-                    Instance = "QA",
-                    Url = "http://172.20.18.133:8732/ExtremeMediator/Service",
+                    Url = "URLSERVICE",
                     Active = false,
                     CreatedDate = DateTime.Now
                 },

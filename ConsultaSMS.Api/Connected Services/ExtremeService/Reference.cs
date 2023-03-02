@@ -15628,7 +15628,7 @@ namespace ExtremeService
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_MDS))
             {
-                return new System.ServiceModel.EndpointAddress("http://172.20.13.103:8732/ExtremeMediator/Service");
+                return new System.ServiceModel.EndpointAddress("URLSERVICE/Service");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

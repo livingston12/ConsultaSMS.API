@@ -133,8 +133,8 @@ namespace ConsultaSMS.Test.Service
             {
                 Id = new Guid(),
                 Instance = "DEV",
-                Description = "Mediator de Desarrollo 21.15",
-                Url = "http://172.21.18.15:8732/ExtremeMediator/Service",
+                Description = "Mediator de Desarrollo",
+                Url = "URLSERVICE/Service",
                 Active = true
             }
         };

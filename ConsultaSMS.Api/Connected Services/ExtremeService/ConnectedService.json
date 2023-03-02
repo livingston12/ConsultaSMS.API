@@ -1,7 +1,7 @@
 {
   "ExtendedData": {
     "inputs": [
-      "http://172.20.13.103:8732/ExtremeMediator/Service"
+      "URLSERVICE/Service"
     ],
     "collectionTypes": [
       "System.Array",
