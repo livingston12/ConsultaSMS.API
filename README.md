@@ -21,22 +21,22 @@ Before starting you need the following tools [Git](https://git-scm.com) and [Ef 
 
 ## Starting ##
 
-#### 1. Clonar proyecto
-$ git clone https://dev.azure.com/BMSC/Software%20Factory/_git/BSC%20APIs
+#### 1. Clone project
+$ git clone https://github.com/livingston12/ConsultaSMS.API
 
-#### 3. Ingresar a carpeta en cmd o terminal en visual studio code
+#### 3. Enter folder in cmd or terminal in visual studio code
 `cd ConsultaSMS.Api/ConsultaSMS.Api`
 
-#### 4. Configurar conection string
-$ Cambiar la variable **(`ConsultaSMSConnection`)** para que apunte a la base de datos si no existe la crea. modificar en el archivo **(`appsetting.develoment.json`)** si estas en desarrollo, si esta publicada cambiar en **(`appsetting.json`)**. 
+#### 4. Configure connection string
+$ Change the variable **(`QuerySMSConnection`)** to point to the database if it doesn't exist create it. modify in the file **(`appsetting.develoment.json`)** if you are in development, if it is published change in **(`appsetting.json`)**. 
 
-#### 5. intalar dependecias
+#### 5. Install dependencies
 $ `dotnet install`
 
-#### 6. Restaurar dependecias
+#### 6. Restore dependencies
 $ `dotnet restore`
 
-## Publicar proyecto ##
+## publish project ##
 $ `dotnet build`
 
 <br>
